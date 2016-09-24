@@ -1,0 +1,38 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-dev": "NODE_ENV=dev webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Herethic/todolist.git"
+  },
+  "author": "Arthur Paveliev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Herethic/todolist/issues"
+  },
+  "homepage": "https://github.com/Herethic/todolist#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0"
+  }
+}
