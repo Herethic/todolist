@@ -1,6 +1,8 @@
 const NODE_ENV = process.env.NODE_ENV || 'dev';
 var webpack = require('webpack');
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   entry: './src/index',
   output: {
@@ -11,7 +13,8 @@ module.exports = {
   watch: NODE_ENV === 'dev',
 
   plugins: [
-    new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV)})
+    new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV)}),
+    new ExtractTextPlugin("build.css")
   ],
 
   module: {
@@ -24,6 +27,13 @@ module.exports = {
           plugins: ["transform-decorators-legacy"],
           presets: ['es2015', 'react', 'stage-0']
         }
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader!less-loader'
+        })
       }
     ]
   },
