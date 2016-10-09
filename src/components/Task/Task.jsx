@@ -13,10 +13,10 @@ export default class Task extends Component {
     const { title, description, status } = this.props;
 
     return (
-      <div className="task-component-root">
-        <h3 className="task-title">{title}</h3>
-        <p className="description muted">{description}</p>
-        <div className="status">{status}</div>
+      <div className="task-component">
+        <h3 className="task-component__title">{title}</h3>
+        <p className="task-component__description muted">{description}</p>
+        <div className="task-component__status">{status}</div>
       </div>
     );
   }

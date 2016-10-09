@@ -46,19 +46,19 @@ export default class ToDoList extends Component {
     let content = [];
     content = tasks.map(function(item, i) {
       return (
-        <li key={_.uniqueId(`task-`)} className="task">
+        <li key={_.uniqueId(`task-`)} className="todolist-component__body__item">
           <Task {...item} />
         </li>
       )
     });
     return (
-      <div className="todo-list-component-root">
-        <h3 className="list-title">ToDo List:</h3>
-        <ul className="tasks-list">
+      <div className="todolist-component">
+        <h3 className="todolist-component__title">ToDo List:</h3>
+        <ul className="todolist-component__body">
           {content}
         </ul>
         { fetching && <WaitBar text="Loading..." /> }
-        <div className="controls">
+        <div className="todolist-component__controls">
           <Button className="add-task" onClick={this.showAddTaskForm}>New task</Button>
         </div>
         <AddTaskForm

@@ -9,8 +9,8 @@ export default class Header extends Component {
   render() {
     const title = this.props.title;
     return (
-      <header>
-        <h1 className="title">{title}</h1>
+      <header className="header">
+        <h1 className="header__title">{title}</h1>
       </header>
     );
   }

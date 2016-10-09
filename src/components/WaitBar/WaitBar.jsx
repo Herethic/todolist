@@ -10,8 +10,8 @@ export default class WaitBar extends Component {
   render() {
     return (
       <div className="wait-bar">
-        <div className="wait-icon"></div>
-        <div className="wait-text">Loading...</div>
+        <div className="wait-bar__icon"></div>
+        <div className="wait-bar__text">Loading...</div>
       </div>
     );
   }
